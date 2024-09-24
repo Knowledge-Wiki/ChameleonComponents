@@ -46,8 +46,9 @@ class ChameleonComponents {
 		// $bootstrapManager = \Bootstrap\BootstrapManager::getInstance();
 		$theme = $GLOBALS['wgChameleonComponentsTheme'];
 		$localPath = $GLOBALS['wgExtensionDirectory'] . "/ChameleonComponents/resources/$theme";
-		if ( !file_exists( $localPath ) ) {
-			throw new MWException( "theme $theme not found" );
+		if ( empty( $theme ) ||  !file_exists( $localPath ) ) {
+			// throw new MWException( "theme $theme not found" );
+			return;
 		}
 
 		// include chameleon components
