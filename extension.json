@@ -1,0 +1,61 @@
+{
+	"name": "ChameleonComponents",
+	"author": "thomas-topway-it",
+	"version": "1.0",
+	"url": "https://www.mediawiki.org/wiki/Extension:ChameleonComponents",
+	"descriptionmsg": "kma-chameleon-skin-extension-desc",
+	"license-name": "GPL-2.0-or-later",
+	"requires": {
+		"MediaWiki": ">= 1.35.0"
+	},
+	"MessagesDirs": {
+		"ChameleonComponents": [
+			"i18n"
+		]
+	},
+	"callback": "ChameleonComponentsHooks::onRegistration",
+	"AutoloadNamespaces": {
+	},
+	"AutoloadClasses": {
+		"ChameleonComponentsHooks": "includes/ChameleonComponentsHooks.php",
+		"ChameleonComponents": "includes/ChameleonComponents.php"
+	},
+	"ExtensionMessagesFiles": {
+		"ChameleonComponentsAlias": "ChameleonComponents.alias.php",
+		"ChameleonComponentsMagic": "ChameleonComponents.i18n.magic.php"
+	},
+	"Hooks": {
+		"BeforeInitialize": "ChameleonComponentsHooks::onBeforeInitialize",
+		"ParserFirstCallInit": "ChameleonComponentsHooks::onParserFirstCallInit",
+		"BeforePageDisplay": "ChameleonComponentsHooks::onBeforePageDisplay"
+	},
+	"ConfigRegistry": {
+	},
+	"SpecialPages": {
+	},
+	"APIModules": {
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "ChameleonComponents/resources"
+	},
+	"ResourceModules": {
+		"ext.ChameleonComponents": {
+			"position": "top",
+			"scripts": [
+			],
+			"styles": [
+			],
+			"dependencies": [
+			],
+			"messages": [
+			]
+		}
+	},
+	"config": {
+		"ChameleonComponentsTheme": {
+			"value": "fina"
+		}
+	},
+	"manifest_version": 2
+}
